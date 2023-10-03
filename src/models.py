@@ -43,7 +43,7 @@ class User(Base):
 class Post(Base):
   __tablename__ = 'post'
   id = Column(Integer, primary_key=True)
-  user_relationship = Column(Integer, ForeignKey('User.id'))
+  user_relationship = Column(Integer, ForeignKey('user.id'))
   user = relationship(User)
 
 
